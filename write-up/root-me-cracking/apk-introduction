@@ -1,8 +1,8 @@
-Writeup for [APK - Introduction](https://www.root-me.org/en/Challenges/Cracking/APK-Introduction?action_solution=voir#ancre_solution)
+Writeup for (APK - Introduction)[https://www.root-me.org/en/Challenges/Cracking/APK-Introduction?action_solution=voir#ancre_solution]
 The challenge wants us to rev the apk file, so I put it inside jadx to analyze the apk's logic.
 After wandering around, I bumped into the *MainActivity* folder, where the logic is stored.
 I saw the makeFlag function:
-```java
+```
 public String makeFlag(String s) {
         String a = "" + s.charAt(5);
         String b = s.charAt(2) + "";
@@ -22,18 +22,18 @@ public String makeFlag(String s) {
     }
 ```
 and just below a few lines:
-```java
+```
  if (MainActivity.this.ed1.getText().toString().equals(MainActivity.this.makeFlag(seed))) {
                     Toast.makeText(MainActivity.this.getApplicationContext(), "Well played! You can validate now with this password :)", 0).show();
 ```
 This is clear now, the program is a password checker with the encryption of the seed. So getting the seed was the only problem then.
 So I used apktool to get the resources of this apk by:
-```bash
+```
 apktool d basic_rev.apk
 ```
 To get the seed string, I went to /res/values/strings.xml.
 The seed is:
-```xml
+```
 <string name="seed">1dndr@</string>
 ```
 Finally, I ran the java program with this hardcoded seed and got the flag.
