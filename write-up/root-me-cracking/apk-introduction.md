@@ -1,4 +1,4 @@
-Writeup for (APK - Introduction)[https://www.root-me.org/en/Challenges/Cracking/APK-Introduction?action_solution=voir#ancre_solution]
+Writeup for [APK - Introduction](https://www.root-me.org/en/Challenges/Cracking/APK-Introduction?action_solution=voir#ancre_solution)
 The challenge wants us to rev the apk file, so I put it inside jadx to analyze the apk's logic.
 After wandering around, I bumped into the *MainActivity* folder, where the logic is stored.
 I saw the makeFlag function:
