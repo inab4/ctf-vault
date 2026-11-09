@@ -6,7 +6,7 @@ First, I ran
 file *
 ```
 to check the file type, and it is ELF32 with MIPS32 and stripped.
-So I decided to put it in IDA, then I ran the pseudo code by pressing F5:
+So I decided to put it in IDA, then I ran the pseudocode by pressing F5:
 ```c
   int i; // [sp+18h] [+18h] BYREF
   char s[4]; // [sp+1Ch] [+1Ch] BYREF cc ad ne tf
