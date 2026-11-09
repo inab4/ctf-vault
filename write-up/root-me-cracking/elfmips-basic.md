@@ -1,6 +1,6 @@
 Write up for [ELF MIPS - Basic Crackme](https://www.root-me.org/en/Challenges/Cracking/ELF-MIPS-Basic-Crackme?action_solution=voir&debut_affiche_solutions=0#pagination_affiche_solutions)
 
-]In this challenge, we are given a bin file.
+In this challenge, we are given a bin file.
 First, I ran 
 ```bash
 file *
