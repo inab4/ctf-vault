@@ -26,4 +26,4 @@ def _ready():
 ready()
 
 ```
-Then we got the key!
+The output will be the key.
