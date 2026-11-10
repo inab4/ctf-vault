@@ -1,4 +1,5 @@
 Write up for [ELF x86 - CrackPass](https://www.root-me.org/fr/Challenges/Cracking/ELF-x86-CrackPass)
+
 The program is just simply a password checker in ELF32. So I decide to pass it to IDA.
 IDA analyzes that the program will take our argv[1] and compare it with, not plain string, the runtime generated password.
 So I can retrieve the password easily by dynamic analysis. However, the program prevent this by stripping and ptrace, per se.
